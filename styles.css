@@ -1,0 +1,634 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(253, 253, 253);
+}
+
+.navbar {
+    width: 100vw;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    /* border-bottom: 0.5px solid rgb(190, 198, 198); */
+    z-index: 1000;
+}
+
+.nav-menu {
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+    font-size: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: rgb(190, 198, 198);
+}
+
+.nav-menu a:hover {
+    color: rgb(221, 228, 228);
+    font-size: 21px;
+}
+
+#main-section {
+    background-image: url("/assets/images/solar-system-galaxy-background-with-planets-aesthetic-style.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: rgb(190, 198, 198);
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    padding: 40px 72px;
+    /* border: 1px solid rgb(190, 198, 198); */
+    border-radius: 3px;
+    position: relative;
+}
+
+.main-content span:nth-child(1) {
+    font-size: 78px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(190, 198, 198);
+}
+
+.main-content span:nth-child(2),
+span:nth-child(3) {
+    font-size: 24px;
+}
+
+.main-content button {
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    color: black;
+    background-color: rgb(190, 198, 198);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.main-content button:hover {
+    transform: scale(1.05);
+    background-color: rgb(0, 0, 0);
+    color: rgb(190, 198, 198);
+    border: 1px solid rgb(190, 198, 198);
+}
+
+#about-section{
+    background-image: url("/assets/images/solar-system-universe-background-with-earth-aesthetic-style.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-me{
+    padding: 20px; 
+    background-color:rgba(0, 0, 0, 0.6) ;
+    border: 1px solid rgb(190,198,198);
+    border-radius: 3px;
+}
+
+.about-me p{
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.myname{
+    font-size: 50px;
+    font-family: cursive;
+}
+
+.about-skills{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 38px;
+    gap: 2rem;
+}
+
+.about-skills img{
+    height: 80px;
+    width: 80px;
+    transition: all 0.3s ease-in;
+}
+
+.about-skills img:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+
+
+
+#projects-section{
+    position: relative;
+    height: 100vh;
+}
+
+.carousel{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel .list .item{
+    position: absolute;
+    inset :0 0 0 0;
+}
+
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+}
+
+.carousel .list .item .content .title{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 1em;
+}
+
+
+
+.carousel .list .item .content button{
+    height: 40px;
+    width: 100px;
+    color: black;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.thumbnail .item .content{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title{
+    font-weight: bold;
+    color: white;
+    text-shadow:  2px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    color: rgb(252, 252, 252);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: large;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.arrows button:hover{
+    background-color: #eee;
+    color: #555;
+}
+
+
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .desc,
+.carousel .list .item:nth-child(1) .buttons{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0px);
+    }
+}
+
+.carousel .list .item:nth-child(1) .title{
+    animation-delay: 1.2s;
+}
+
+.carousel .list .item:nth-child(1) .desc{
+    animation-delay: 1.5s;
+}
+
+.carousel .list .item:nth-child(1) .buttons{
+    animation-delay: 1.8s;
+}
+
+
+/* next button effect*/
+
+
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to{
+        height: 100%;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+    to{
+        width: 150px;
+    }
+}
+
+.carousel.next .thumbnail{
+    transform: translateX(150px);
+    animation: transformThumbnail .5s linear 1 forwards;
+}
+
+@keyframes tranformThumbnail{
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+
+.carousel.prev .list .item:nth-child(2) img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImage 0.5 linear 1 forwards;
+}
+
+
+@keyframes outImage{
+    to{
+        width: 150px;
+        height: 220px;
+        border-radius: 20px;
+        left: 50%;
+        bottom: 50px;
+    }
+}
+
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .desc,
+.carousel.prev .list .item:nth-child(2) .buttons{
+    animation: contentOut 1.5s linear 1 forwards;
+}
+
+@keyframes contentOut {
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+
+
+.time{
+    width: 0%;
+    height: 5px;
+    background-color: rgb(190, 198, 198);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+
+.carousel.next .time,
+.carousel.prev .time{
+    width: 100%;
+    animation: timeRunning 2s linear 1 forwards;
+}
+
+@keyframes timeRunning{
+    to{
+        width: 0;
+    }
+}
+
+
+@media screen and (max-width: 678px){
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+
+    .carousel .list .item .content{
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+#contact-section{
+    background-image: url("/assets/images/photorealistic-earth-planet.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profile-card{
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 20px;
+    width: 400px;
+    height: 400px;
+    border: 1px solid white;
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+
+.profile-img-container{
+    height: 260px;
+    width: 200px;
+    background-image: url("/assets/images/profile.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    border: 2px solid white;
+    object-fit:fill;
+}
+
+.profile-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-name{
+    font-size: 28px;
+}
+
+.profile-contacts{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.profile-contacts .link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: rgb(57, 57, 255);
+    height: 34px;
+    width: 34px;
+    border-radius: 100%;
+    margin: 3px 10px;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+}
+
+.profile-contacts .link:hover{
+    transform: scale(1.15);
+}
+
+
+
+
+
+@media only screen and (max-width:750px) {
+
+    .navbar {
+        height: 40px;
+        padding-left: 5px;
+    }
+
+    .nav-menu {
+        font-size: 16px;
+    }
+
+    .nav-menu a:hover {
+        color: rgb(221, 228, 228);
+        font-size: 17px;
+    }
+
+
+    .main-content {
+        padding: 20px 50px;
+    }
+
+
+    .main-content span:nth-child(1) {
+        font-size: 58px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 900;
+    }
+    
+
+    .main-content span:nth-child(2),
+    span:nth-child(3) {
+        font-size: 20px;
+    }
+
+    .about-me p{
+        font-size: 16px;
+    }
+
+    .about-skills{
+        font-size: 32px;
+    }
+    
+}
+
+
+@media only screen and (max-width:480px) {
+
+    .navbar {
+        height: 30px;
+        padding-left: 5px;
+    }
+
+    .nav-menu {
+        font-size: 12px;
+    }
+
+    .nav-menu a:hover {
+        color: rgb(221, 228, 228);
+        font-size: 13px;
+    }
+
+    .main-content {
+        padding: 20px 30px;
+    }
+
+    .main-content span:nth-child(1) {
+        font-size: 48px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 900;
+    }
+
+    .main-content span:nth-child(2),
+    span:nth-child(3) {
+        font-size: 15px;
+    }
+
+    .main-content button{
+        width: 60px;
+        height: 20px;
+        font-size: 12px;
+    }
+    
+    .about-me p{
+        font-size: 10px;
+    }
+
+    .about-skills{
+        font-size: 22px;
+    }
+
+    .about-skills img{
+        height: 50px;
+        width: 50px;
+    }
+
+    .profile-card{
+        width: 280px;
+    }
+
+    .profile-name{
+        font-size: 22px;
+    }
+}
+
+
