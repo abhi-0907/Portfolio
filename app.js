@@ -48,7 +48,7 @@ function showSlider(type){
 
 document.getElementById('resumeBtn').onclick = function() {
     const link = document.createElement('a');
-    link.href = '/assets/myresume.pdf';
+    link.href = 'assets/myresume.pdf';
     link.download = 'AbhiResume.pdf';
     link.click();
 };
